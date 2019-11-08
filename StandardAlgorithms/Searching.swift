@@ -11,6 +11,7 @@ import Foundation
 class Searching {
     
     func linearSearch(array: [Int],target: Int) -> Bool {
+        // Big O depends on target chosen
         var i = 0
         var found = false
         while found == false {
