@@ -10,8 +10,7 @@ import Foundation
 
 class Searching {
     
-    func linearSearch(sortedArray: [Int],target: Int) -> Bool {
-        let array = sortedArray
+    func linearSearch(array: [Int],target: Int) -> Bool {
         var i = 0
         var found = false
         while found == false {
@@ -24,8 +23,25 @@ class Searching {
                 }
             }
             return found
+        }}
+    
+    func binarySearch(sortedArray: [Int], target: Int) -> Bool {
+        var lowerBound = 0
+        var upperBound = sortedArray.count
+        var found = false
+        while lowerBound < upperBound {
+            let middle = lowerBound + (upperBound - lowerBound) / 2
+            if sortedArray[middle] == target {
+                found = true
+                return found
+            } else if sortedArray[middle] < target {
+                lowerBound = middle + 1
+            } else {
+                upperBound = middle
+            }
         }
         
+        return found
     }
     
 }
