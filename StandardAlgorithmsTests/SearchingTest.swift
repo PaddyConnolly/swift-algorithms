@@ -134,54 +134,54 @@ class SearchingTest: XCTestCase {
         }
         
     }
-    
 
-}
+    func testBinarySearchPerformanceWithArrayOf5Integers() {
+        //arrange
+        let searching = Searching()
+        var data = [Int]()
+        
+        for i in 0..<5 {
+            data.append(i+1)
+        }
+        let target = data[Int.random(in: 0..<data.count)]
+        
+        //act
+        measure {
+            _ = searching.binarySearch(sortedArray: data, target: target)
+        }
+    }
 
-func testBinarySearchPerformanceWithArrayOf5Integers() {
-    //arrange
-    let searching = Searching()
-    var data = [Int]()
-    
-    for i in 0..<5 {
-        data.append(i+1)
+    func testBinarySearchPerformanceWithArrayOf50Integers() {
+        //arrangea
+        let searching = Searching()
+        var data = [Int]()
+        
+        for i in 0..<50 {
+            data.append(i+1)
+        }
+        let target = data[Int.random(in: 0..<data.count)]
+        
+        //act
+        measure {
+            _ = searching.binarySearch(sortedArray: data, target: target)
+        }
     }
-    let target = data[Int.random(in: 0..<data.count)]
-    
-    //act
-    measure {
-        _ = searching.binarySearch(array: data, target: target)
-    }
-}
 
-func testLinearSearchPerformanceWithArrayOf50Integers() {
-    //arrangea
-    let searching = Searching()
-    var data = [Int]()
-    
-    for _ in 0..<50 {
-        data.append(Int.random(in: 0...100))
+    func testBinarySearchPerformanceWithArrayOf500Integers() {
+        //arrange
+        let searching = Searching()
+        var data = [Int]()
+        
+        for i in 0..<500 {
+            data.append(i+1)
+        }
+        let target = data[Int.random(in: 0..<data.count)]
+        
+        //act
+        measure {
+            _ = searching.binarySearch(sortedArray: data, target: target)
+        }
     }
-    let target = data[Int.random(in: 0..<data.count)]
-    
-    //act
-    measure {
-        _ = searching.linearSearch(array: data, target: target)
-    }
-}
 
-func testLinearSearchPerformanceWithArrayOf500Integers() {
-    //arrange
-    let searching = Searching()
-    var data = [Int]()
-    
-    for _ in 0..<500 {
-        data.append(Int.random(in: 0...100))
-    }
-    let target = data[Int.random(in: 0..<data.count)]
-    
-    //act
-    measure {
-        _ = searching.linearSearch(array: data, target: target)
-    }
+
 }

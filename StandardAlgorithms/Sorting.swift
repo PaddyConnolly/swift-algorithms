@@ -26,7 +26,7 @@ class Sorting {
     }
     
     func merge(left: [Int], right: [Int]) -> [Int] {
-        // Tests indicate O(n)
+        // O(n)
         // Start each side at 0
         var countLeft = 0
         var countRight = 0

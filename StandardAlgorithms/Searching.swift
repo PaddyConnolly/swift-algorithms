@@ -27,6 +27,7 @@ class Searching {
         }}
     
     func binarySearch(sortedArray: [Int], target: Int) -> Bool {
+        // O(n)
         var lowerBound = 0
         var upperBound = sortedArray.count
         var found = false

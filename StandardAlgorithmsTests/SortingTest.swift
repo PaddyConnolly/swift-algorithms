@@ -47,10 +47,10 @@ class SortingTest: XCTestCase {
         for _ in 0..<5 {
             data.append(Int.random(in: 1...100))
         }
-        
+            
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
         
     }
@@ -66,7 +66,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
                 
     }
@@ -82,7 +82,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
         
     }
@@ -126,7 +126,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
         
     }
@@ -142,7 +142,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
                 
     }
@@ -158,7 +158,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
         
     }
