@@ -8,8 +8,8 @@
 import Foundation
 
 class Sorting {
-    func bubbleSort(data: [Int]) -> [Int] {
-        var array = data
+    func bubbleSort(array: [Int]) -> [Int] {
+        var array = array
         for _ in 0..<array.count {
             for j in 1..<array.count {
            if array[j] < array[j-1] {
@@ -64,20 +64,41 @@ class Sorting {
         return completedArray
     }
     
-    func mergeSort(data: [Int]) -> [Int] {
-        let array = data
+    func mergeSort(array: [Int]) -> [Int] {
         // Return if length is 1. Already ordered
         if array.count == 1 {
             return array
         }
         let middle = array.count / 2
         // Recursively sort
-        let left = mergeSort(data: Array(array[0..<middle]))
-        let right = mergeSort(data: Array(array[middle..<array.count]))
+        let left = mergeSort(array: Array(array[0..<middle]))
+        let right = mergeSort(array: Array(array[middle..<array.count]))
         
         return merge(left: left, right: right)
         
     }
-}
+    
+    func quickSort(array: [Int]) -> [Int] {
+        // O(n)
+        if array.count <= 1 {
+            return array
+        } else {
+            let pivot = array[0]
+            var left = [Int]()
+            var right = [Int]()
+            for i in 1..<array.count {
+                let item = array[i]
+                if item <= pivot {
+                    left.append(item)
+                } else {
+                    right.append(item)
+                }
+            }
+            var sortedArray = [Int]()
+            sortedArray.append(contentsOf: quickSort(array: left))
+            sortedArray.append(pivot)
+            sortedArray.append(contentsOf: quickSort(array: right))
+            return sortedArray
+        }}}
     
 

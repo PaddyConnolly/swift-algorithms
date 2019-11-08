@@ -66,7 +66,7 @@ class SearchingTest: XCTestCase {
     }
     
     func testLinearSearchPerformanceWithArrayOf50Integers() {
-        //arrangea
+        //arrange
         let searching = Searching()
         var data = [Int]()
         
