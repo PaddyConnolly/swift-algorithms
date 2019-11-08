@@ -9,9 +9,12 @@
 import Foundation
 
 func displayAlgorithms() {
-    let testCase = [57,78,45,67,13,62,23,93,42,8]
+    var testCase = [Int]()
+    for _ in 0..<10 {
+        testCase.append(Int.random(in: 0...100 ))
+    }
     let binarySearchTestCase = [54,67,13,78,98,43,23,46,57,87]
-    let target = 13
+    let target = Int.random(in: 0...100)
     let sorting = Sorting()
     let searching = Searching()
     
@@ -25,8 +28,9 @@ func displayAlgorithms() {
     Average Case: O(n^2) comparisons, O(n^2) swaps
     Worst Case: O(n^2) comparisons, O(n^2) swaps
     Worst Case Space Complexity: O(1)
-
-    \(sorting.bubbleSort(array: testCase))
+    
+    Input: \(testCase)
+    Output: \(sorting.bubbleSort(array: testCase))
     
     Merge Sort
         
@@ -36,8 +40,9 @@ func displayAlgorithms() {
     Average Case: O(n log n)
     Worst Case: O(n log n)
     Worst Case Space Complexity: O(n)
-        
-    \(sorting.mergeSort(array: testCase))
+
+    Input: \(testCase)
+    Output: \(sorting.mergeSort(array: testCase))
     
     Quick Sort
         
@@ -48,8 +53,9 @@ func displayAlgorithms() {
     Average Case: O(n log n)
     Worst Case: O(n^2)
     Worst Case Space Complexity: O(n)
-    
-    \(sorting.quickSort(array: testCase))
+
+    Input: \(testCase)
+    Output: \(sorting.quickSort(array: testCase))
     
     Insertion Sort
         
@@ -60,8 +66,10 @@ func displayAlgorithms() {
     Average Case: O(n^2)
     Worst Case: O(n^2)
     Worst Case Space Complexity: O(n)
-    
-    \(sorting.insertionSort(array: testCase))
+        
+    Input: \(testCase)
+    Output: \(sorting.insertionSort(array: testCase))
+        
     """)
     
     print("""
@@ -77,11 +85,13 @@ func displayAlgorithms() {
     Worst Case: O(n)
     Worst Case Space Complexity: O(1)
 
+    Input: \(testCase)
+    Target: \(target)
     """)
     if searching.linearSearch(array: testCase, target: target) == true {
-        print("Value found!")
+        print("Output: Value found!")
     } else {
-        print("Value not found")
+        print("Output: Value not found")
     }
     
     print("""
@@ -97,13 +107,16 @@ func displayAlgorithms() {
     Average Case: O(log n)
     Worst Case: O(log n)
     Worst Case Space Complexity: O(1)
-
+    
+    Input: \(binarySearchTestCase)
+    Target: \(target)
     """)
     
+    
     if searching.binarySearch(sortedArray: binarySearchTestCase, target: target) == true {
-        print("Value found!")
+        print("Output: Value found!")
     } else {
-        print("Value not found")
+        print("Output: Value not found")
     }
     
 }
