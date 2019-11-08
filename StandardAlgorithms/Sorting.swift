@@ -26,7 +26,6 @@ class Sorting {
     }
     
     func merge(left: [Int], right: [Int]) -> [Int] {
-        // O(n)
         // Start each side at 0
         var countLeft = 0
         var countRight = 0
@@ -79,7 +78,6 @@ class Sorting {
     }
     
     func quickSort(array: [Int]) -> [Int] {
-        // O(n)
         if array.count <= 1 {
             return array
         } else {
@@ -99,6 +97,24 @@ class Sorting {
             sortedArray.append(pivot)
             sortedArray.append(contentsOf: quickSort(array: right))
             return sortedArray
-        }}}
+        }}
+    
+    func insertionSort(array: [Int]) -> [Int] {
+        var array = array
+        for i in 1..<array.count {
+            var j = i
+            while j > 0 && array[j] < array[j-1] {
+                let temp = array[j]
+                array[j] = array[j-1]
+                array[j-1] = temp
+                j -= 1
+            }
+        }
+        
+        return array
+        
+    }
+    
+}
     
 

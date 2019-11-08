@@ -239,4 +239,81 @@ class SortingTest: XCTestCase {
         
     }
     
+    func testInsertionSortWithIntegerArrayReturnsSortedArray() {
+        //arrange
+        let sorting = Sorting()
+        let data = [9,7,5,3,1]
+        let expected = [1,3,5,7,9]
+        
+        //act
+        let actual = sorting.insertionSort(array: data)
+        
+        //assert
+        XCTAssertEqual(actual, expected)
+    }
+    
+    func testInsertionSortWithManyIntegerArraysReturnsSortedArrays() {
+        //arrange
+        let testCases = [(input: [10, 3, 30, 2, 5], expected: [2, 3, 5, 10, 30]),
+                             (input: [4, 3, 15, 2, 1, 6], expected: [1, 2, 3, 4, 6, 15])]
+        let sorting = Sorting()
+            
+        //act
+        //assert
+            
+        for testCase in testCases {
+            let actual = sorting.insertionSort(array: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+        
+    }
+    
+    func testInsertionSortPerformanceWithArrayOf5Integers() {
+        //arrange
+        let sorting = Sorting()
+        var data = [Int]()
+        
+        for _ in 0..<5 {
+            data.append(Int.random(in: 1...100))
+        }
+        
+        //act
+        measure {
+            _ = sorting.insertionSort(array: data)
+        }
+        
+    }
+
+    func testInsertionSortPerformanceWithArrayOf50Integers() {
+        //arrange
+        let sorting = Sorting()
+        var data = [Int]()
+        
+        for _ in 0..<50 {
+            data.append(Int.random(in: 1...100))
+        }
+        
+        //act
+        measure {
+            _ = sorting.insertionSort(array: data)
+        }
+                
+    }
+
+    func testInsertionSortPerformanceWithArrayOf500Integers() {
+        //arrange
+        let sorting = Sorting()
+        var data = [Int]()
+        
+        for _ in 0..<500 {
+            data.append(Int.random(in: 1...100))
+        }
+        
+        //act
+        measure {
+            _ = sorting.insertionSort(array: data)
+        }
+        
+    }
+    
 }

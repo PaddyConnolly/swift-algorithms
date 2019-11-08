@@ -11,7 +11,6 @@ import Foundation
 class Searching {
     
     func linearSearch(array: [Int],target: Int) -> Bool {
-        // Big O depends on target chosen
         var i = 0
         var found = false
         while found == false {
@@ -27,7 +26,6 @@ class Searching {
         }}
     
     func binarySearch(sortedArray: [Int], target: Int) -> Bool {
-        // O(n)
         var lowerBound = 0
         var upperBound = sortedArray.count
         var found = false
