@@ -28,10 +28,12 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         
         //act
-        //assert
-        
         for testCase in testCases {
             let actual = sorting.bubbleSort(data: testCase.input)
+            
+        //assert
+        
+
             XCTAssertEqual(actual, testCase.expected)
         }
         

@@ -12,6 +12,9 @@
 		7B068CE52371A2E6000356B7 /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B068CE42371A2E6000356B7 /* SortingTest.swift */; };
 		7B068CE72371A3BF000356B7 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B068CE62371A3BF000356B7 /* Sorting.swift */; };
 		7B068CE82371A3DA000356B7 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B068CE62371A3BF000356B7 /* Sorting.swift */; };
+		7BCDF536237575FB0053478B /* SearchingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDF535237575FB0053478B /* SearchingTest.swift */; };
+		7BCDF538237576150053478B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDF537237576150053478B /* Searching.swift */; };
+		7BCDF539237576150053478B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDF537237576150053478B /* Searching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,8 @@
 		7B068CE02371A1F5000356B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B068CE42371A2E6000356B7 /* SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTest.swift; sourceTree = "<group>"; };
 		7B068CE62371A3BF000356B7 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		7BCDF535237575FB0053478B /* SearchingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTest.swift; sourceTree = "<group>"; };
+		7BCDF537237576150053478B /* Searching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 			children = (
 				7B068CD123719C54000356B7 /* main.swift */,
 				7B068CE62371A3BF000356B7 /* Sorting.swift */,
+				7BCDF537237576150053478B /* Searching.swift */,
 			);
 			path = StandardAlgorithms;
 			sourceTree = "<group>";
@@ -87,6 +93,7 @@
 				7B068CDE2371A1F5000356B7 /* StandardAlgorithmsTests.swift */,
 				7B068CE02371A1F5000356B7 /* Info.plist */,
 				7B068CE42371A2E6000356B7 /* SortingTest.swift */,
+				7BCDF535237575FB0053478B /* SearchingTest.swift */,
 			);
 			path = StandardAlgorithmsTests;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCDF538237576150053478B /* Searching.swift in Sources */,
 				7B068CE72371A3BF000356B7 /* Sorting.swift in Sources */,
 				7B068CD223719C54000356B7 /* main.swift in Sources */,
 			);
@@ -191,6 +199,8 @@
 			files = (
 				7B068CE82371A3DA000356B7 /* Sorting.swift in Sources */,
 				7B068CE52371A2E6000356B7 /* SortingTest.swift in Sources */,
+				7BCDF536237575FB0053478B /* SearchingTest.swift in Sources */,
+				7BCDF539237576150053478B /* Searching.swift in Sources */,
 				7B068CDF2371A1F5000356B7 /* StandardAlgorithmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
