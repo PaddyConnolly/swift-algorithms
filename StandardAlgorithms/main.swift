@@ -13,7 +13,7 @@ func displayAlgorithms() {
     for _ in 0..<10 {
         testCase.append(Int.random(in: 0...100 ))
     }
-    let binarySearchTestCase = [54,67,13,78,98,43,23,46,57,87]
+    let binarySearchTestCase = [9,13,27,34,48,56,60,72,81,95]
     let target = Int.random(in: 0...100)
     let sorting = Sorting()
     let searching = Searching()
